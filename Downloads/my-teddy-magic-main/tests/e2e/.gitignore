@@ -1,0 +1,6 @@
+# Test outputs
+*.json
+*.html
+screenshots/*
+!README.md
+
