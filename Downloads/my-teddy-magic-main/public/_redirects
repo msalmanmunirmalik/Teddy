@@ -1,0 +1,3 @@
+# Render SPA redirects - serve index.html for all routes
+/*    /index.html   200
+

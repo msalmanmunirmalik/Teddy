@@ -1,0 +1,27 @@
+services:
+  # Web Service (Recommended for SPA routing support)
+  - type: web
+    name: my-teddy-magic
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: PORT
+        value: 10000
+    plan: free
+
+  # Alternative: Static Site Service (if you prefer)
+  # Uncomment and use this instead if you want static site deployment
+  # - type: static
+  #   name: my-teddy-magic-static
+  #   buildCommand: npm install && npm run build
+  #   staticPublishPath: ./dist
+  #   envVars:
+  #     - key: VITE_SUPABASE_URL
+  #       sync: false
+  #     - key: VITE_SUPABASE_PUBLISHABLE_KEY
+  #       sync: false
